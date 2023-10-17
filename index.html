@@ -3,47 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Aram Nayebbandi" />
+  <meta name="description" content="You can rate our support services to help us improve our offering" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css" />
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
   
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="cont">
+    <div class="stand">
+      <div class="circlestr">
+        <img src="./images/icon-star.svg" alt="" title="" />
+      </div>
+      <h1 class="stand__h">How did we do?</h1>
+      <p class="stand__p">Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+        <form>
+          <fieldset>
+            <legend class="sr-only">Choose a rating</legend>
+            <input type="radio" id="rating1" name="rating" value="1" class="sr-only">
+            <label class="circle" for="rating1">1</label>
 
-  <!-- Rating state start -->
+            <input type="radio" id="rating2" name="rating" value="2" class="sr-only">
+            <label class="circle" for="rating2">2</label>
 
-  How did we do?
+            <input type="radio" id="rating3" name="rating" value="3" class="sr-only">
+            <label class="circle" for="rating3">3</label>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+            <input type="radio" id="rating4" name="rating" value="4" class="sr-only">
+            <label class="circle" for="rating4">4</label>
 
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <input type="radio" id="rating5" name="rating" value="5" class="sr-only">
+            <label class="circle" for="rating5">5</label>
+          </fieldset>
+          <button class="bttn" tabindex="0">Submit</button>
+        </form>
+    </div>
+    <div class="succ hidden">
+      <img class="succ__img" src="./images/illustration-thank-you.svg" alt="" title="" />
+      <div class="succ_wrapper">
+        <p class="succ__mes">You selected <span class="successmes"></span> out of 5</p>
+      </div>
+      <h2 class="stand__h">Thank you!</h2>
+      <p class="succ__p">We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+  <script src="./javascript.js"></script>
 </body>
 </html>
